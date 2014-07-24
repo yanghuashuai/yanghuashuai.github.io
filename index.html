@@ -1,27 +1,333 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+
 <head>
-<style>
-#center{ 
-    MARGIN-TOP: 300px;
-    MARGIN-RIGHT: auto;
-    MARGIN-LEFT: auto;
-    height:24px;
-    width:217px;
-    vertical-align:middle;
-}
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>知北游</title>
+
+	<style>
+        html, body, div, span, h1, p, a{
+            margin:0;
+            padding:0;
+            list-style-type:none;
+            text-align:left;
+            text-decoration:none;
+            border-bottom:none;
+            font-weight:normal;
+            font-style:normal;
+            border:none;
+            color:#111111;
+        }
+
+        body{
+            margin:0;
+            padding:0;
+            background-color: #f5f5d5 ;
+            font-family: Georgia, serif;
+            letter-spacing: -0.01em;
+            word-spacing:0.2em;
+            line-height: 1.8em;
+            font-size:62.5%;
+            color:#111111;
+            width:98%;
+        }
+
+        h1{
+            font-size:2.88em;
+        }
+
+        h2{
+            font-size:2.88em;
+        }
+
+        h3{
+            font-size:1.87em;
+        }
+
+        h4{
+            font-size:1.5em;
+        }
+
+        img{
+            border: 2px solid #00398a; 
+        }
+
+        p,li{
+            font-size:1.6em;
+            line-height:220%;
+        } 
+
+        #container{
+            margin: 0 auto;
+            background-color:#f5f5d5;
+            padding: 1em;
+
+        }
+
+        body.one-column #container{
+            width: 65%;
+            min-width:640px;
+            max-width:960px;
+        }      
+
+        #header{
+            width:100%;
+        }
+
+        #header{
+            border-bottom:1px solid #d3d3d3;
+            margin:1em;
+            float:left;
+            height:5em;
+        }
+
+        #header h1{
+            margin-top:0.9em;
+            font-size:1.8em;
+
+            color:#556677;
+        }
+
+        #header h1, #header div#header-name{
+            float:left;
+        }
+
+        #content{
+            clear:both;
+            margin:1.5em 1em 1em 1em;
+        }
+
+        #content a:link{
+            color:#556677;
+        }
+
+        #content a:hover{
+            color:#665544;
+        }
+
+        .one-column #alpha{
+            width:100%;
+        }
+
+        body.one-column #content #alpha{
+            padding-top:0.5em;
+        }   
+
+        body.one-column #content #alpha p{
+            margin-top:1em;
+            line-height:180%;
+            margin-left:0.8em;
+        }
+
+        #footer{
+            margin:0 1em;
+            border-top:1px solid #d3d3d3;
+            color:#d3d3d3;
+            padding-top:0;
+            clear:both;  
+            line-height:1.2;     
+        }
+
+        #footer p{
+            font-size:1.6em;
+        }
+
+        #footer a{
+            color:gray;
+        }
+
+        #footer p{
+            text-align:right;
+            margin:0 2em;
+            padding:0.3em;
+            color:gray;
+        }
+
+        @keyframes move{
+            0% { background-color: rgba(0,0,0,.1); }
+            100% { background-color: rgba(0,0,0,0); }
+        }
+
+        @-webkit-keyframes target-fade{
+            0% { background-color: rgba(0,0,0,.1); }
+            100% { background-color: rgba(0,0,0,0); }
+        }
+        @-moz-keyframes target-fade{
+            0% { background-color: rgba(0,0,0,.1); }
+            100% { background-color: rgba(0,0,0,0); }
+        }
+
+        html{
+            width:100%;
+            height: 100%;
+            margin:0;
+            padding:0
+        }
+
+        body{
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position:50% 50%; 
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+            background-image:url(resource/background.jpg);
+            -webkit-transition: All 2s ease;
+            -moz-transition: All 2s ease;
+            -o-transition: All 2s ease;
+            -ms-transition: All 2s ease;
+            transition: All 2s ease;
+        }
+
+        body.one-column #container{
+            background-color:rgba(0,0,0,0.3);
+            border-radius: 1.5em;
+            color: #fefefe;
+
+            overflow: auto; 
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            width:auto;
+            height:auto;
+            max-height: 80%;
+            min-width:90%;
+
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            
+            transition: height 1s ease;
+            transition: top 1s ease;
+        }
+
+        body.one-column #container p,
+        body.one-column #container a{
+            color: #fefefe;
+            text-shadow:0 1px 1px #333
+        }
+
+        body.one-column #container a:hover{
+            text-decoration: underline;
+        }
+
+
+        body.one-column #footer-content a:hover{
+            border-radius: 0.5em;
+        }
+
+        body.one-column #page-alpha p{
+            background-color: rgba(0,0,0,0.5);
+            padding: 0.25rem;
+            border-radius: 0.5em;
+            text-shadow:0 1px 1px #333;
+        }
+
+        body.one-column #header{
+            /* height: 7rem; */
+            display: relative;
+            padding-bottom: 1em;
+        }
+
+        body.one-column #container h1{
+            font-size: 1.4rem;
+            line-height: 90%;
+            color: #fefefe;
+            float: none;
+            margin: auto;
+            padding-top: 0.4rem;
+            text-align: center;
+            font-weight: bolder;
+            text-shadow:0 1px 1px #333;
+        }
+
+        /*
+        body.one-column #header-content:hover h1{
+            text-decoration: underline;
+        }
+
+        body.one-column #header-content h1:hover{
+            cursor:pointer;
+        }
+        */
+
+        body.one-column #header-content p{
+            text-align: center;
+        }
+
+        body.one-column #header-content{
+            display:block;
+            text-align: center;
+            margin: auto;
+        }
+
+        @media (min-width: 641px) and (max-width:770px){
+            body.one-column #container{
+                min-width:70%;
+            }
+        }
+
+        @media (min-width: 771px){
+            body.one-column #container{
+                min-width:40%;
+            }
+        }
+    </style>
 </head>
-<body>
-<div id="center">
-    <object type="application/x-shockwave-flash" data="http://www.zhibeiyou.net/plugins/audio-player/player.swf" width="217" height="24" id="audioplayer1">
-        <param name="FlashVars" value="playerID=1&amp;bg=0xf8f8f8&amp;leftbg=0xeeeeee&amp;lefticon=0x666666&amp;rightbg=0xcccccc&amp;rightbghover=0x999999&amp;righticon=0x666666&amp;righticonhover=0xffffff&amp;text=0x666666&amp;slider=0x666666&amp;track=0xFFFFFF&amp;border=0x666666&amp;loader=0xdddddd&amp;soundFile=http://www.zhibeiyou.net/resource/audio/music.mp3" />
-        <param name="quality" value="high" />
-        <param name="menu" value="false" />
-        <param name="wmode" value="transparent"/>
-    </object>
-</div>
+
+<body id="classic-website" class="mt-main-index one-column">
+    <div id="container">
+        <div id="container-inner">
+            
+            <div id="header">
+                <div id="header-inner">
+                    <div id="header-content" >
+			            <h1>知北游</h1>
+                        <p><i>一个写代码的农民</i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div id="content-inner">
+                    <div id="alpha">
+                        <div id="alpha-inner">
+                            <div id="page-alpha"    style="margin-bottom:2em;">
+                                <p>» <a href="">Lofter</a> / <a href="">Blog</a></p>
+                                <p>» <a href="">About me</a></p>
+                            </div>
+                       </div>
+                    </div>
+                    <div id="beta">
+                        <div id="beta-inner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div id="footer-inner">
+                    <div id="footer-content">
+                        <p>
+                            Powered by 
+                            <a href="http://www.github.com">Github</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
 
