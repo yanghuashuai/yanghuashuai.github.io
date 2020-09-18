@@ -1,3 +1,3 @@
 ## Keep It Simple
 
-Home page of www.zhibeiyou.net
+Home page of blog.codeccode.com
